@@ -1,0 +1,223 @@
+<h1 id='authorisation'>Authorisation</h1><h2 id='sign-up-a-new-individual-sender'>Sign up a new individual sender</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/auth/signup'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'sender_type: {{sender_type}}'</span> <span class="se">\</span>
+  -d <span class="s1">'phone: {{phone}}'</span> <span class="se">\</span>
+  -d <span class="s1">'password: {{password}}'</span> <span class="se">\</span>
+  -d <span class="s1">'name: {{name}}'</span> <span class="se">\</span>
+  -d <span class="s1">'email: {{email}}'</span> <span class="se">\</span>
+  -d <span class="s1">'billing_address: {{billing_address}}'</span> <span class="se">\</span>
+  -d <span class="s1">'account_type: {{account_type}}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6598765432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@yojee.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ACCESS_TOKEN}}"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint signs up a new individual sender.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/signup</code></p>
+<h3 id='body'>Body</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sender_type</td>
+<td>{{sender_type}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>{{phone}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>password</td>
+<td>{{password}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>name</td>
+<td>{{name}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>email</td>
+<td>{{email}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>billing_address</td>
+<td>{{billing_address}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>{{account_type}}</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h2 id='sign-in-as-a-sender'>Sign in as a sender</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/auth/signin'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'password: {{password}}'</span> <span class="se">\</span>
+  -d <span class="s1">'email: {{email}}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6598765432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@yojee.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ACCESS_TOKEN}}"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint signs up as a sender.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/signin</code></p>
+<h3 id='body-2'>Body</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>password</td>
+<td>{{password}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>email</td>
+<td>{{email}}</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h2 id='sign-up-a-new-corporate-sender'>Sign up a new corporate sender</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'uen_no: {{uen_no}}'</span> <span class="se">\</span>
+  -d <span class="s1">'title: {{title}}'</span> <span class="se">\</span>
+  -d <span class="s1">'sender_type: {{sender_type}}'</span> <span class="se">\</span>
+  -d <span class="s1">'phone: {{phone}}'</span> <span class="se">\</span>
+  -d <span class="s1">'payment_option: {{payment_option}}'</span> <span class="se">\</span>
+  -d <span class="s1">'password: {{password}}'</span> <span class="se">\</span>
+  -d <span class="s1">'organisation: {{organisation}}'</span> <span class="se">\</span>
+  -d <span class="s1">'name: {{name}}'</span> <span class="se">\</span>
+  -d <span class="s1">'gst_no: {{gst_no}}'</span> <span class="se">\</span>
+  -d <span class="s1">'email: {{email}}'</span> <span class="se">\</span>
+  -d <span class="s1">'organisation: {{organisation}}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6598765432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@yojee.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ACCESS_TOKEN}}"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint signs up a new corporate sender.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup</code></p>
+<h3 id='body-3'>Body</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uen_no</td>
+<td>{{uen_no}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>title</td>
+<td>{{title}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>sender_type</td>
+<td>{{sender_type}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>{{phone}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>payment_option</td>
+<td>{{payment_option}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>password</td>
+<td>{{password}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>organisation</td>
+<td>{{reg_address}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td></td>
+<td>{{postal_code}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td></td>
+<td>{{phone}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td></td>
+<td>{{name}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td></td>
+<td>{{country}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td></td>
+<td>{{city}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>name</td>
+<td>{{name}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>gst_no</td>
+<td>{{gst_no}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>email</td>
+<td>{{email}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>billing_address</td>
+<td>{{billing_address}}</td>
+<td>String</td>
+</tr>
+</tbody></table>
