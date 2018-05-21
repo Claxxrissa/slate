@@ -1,0 +1,130 @@
+<h1 id='map'>Map</h1><h2 id='get-geocode-of-an-address'>Get geocode of an address</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/maps/geocode'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'query: {{query}}'</span> <span class="se">\</span>
+  -d <span class="s1">'country_code: {{country_code}}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">103.8462451</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2754876</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Singapore"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd, Singapore"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint gets geocode of an address.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/geocode</code></p>
+<h3 id='body'>Body</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td>{{query}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>country_code</td>
+<td>{{country_code}}</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h2 id='get-direction-information'>Get direction information</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/maps/geocode'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'origin: {{origin}}'</span> <span class="se">\</span>
+  -d <span class="s1">'mode: {{mode}}'</span> <span class="se">\</span>
+  -d <span class="s1">'destination: {{destination}}'</span> <span class="se">\</span>
+  -d <span class="s1">'country_iso: {{country_iso}}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"overview_polyline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{overview_polyline}}"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">222</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">968</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{data}}"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint gets direction information.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/geocode</code></p>
+<h3 id='body-2'>Body</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>origin</td>
+<td>{{origin}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>{{mode}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>{{destination}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>country_iso</td>
+<td>{{country_iso}}</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h2 id='get-complete-suggestions-of-an-address'>Get complete suggestions of an address</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/maps/autocomplete'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'query: {{query}}'</span> <span class="se">\</span>
+  -d <span class="s1">'country_iso: {{country_iso}}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">103.8462451</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2754876</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd, Singapore"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint gets complete suggestions of an address.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/autocomplete</code></p>
+<h3 id='body-3'>Body</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td>{{query}}</td>
+<td>String</td>
+</tr>
+<tr>
+<td>country_iso</td>
+<td>{{country_iso}}</td>
+<td>String</td>
+</tr>
+</tbody></table>
