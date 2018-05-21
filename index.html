@@ -226,7 +226,7 @@
             <a href="#public" class="toc-h1 toc-link" data-title="Public">Public</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-user-information" class="toc-h2 toc-link" data-title="Get user information">Get user information</a>
+                    <a href="#get-company-information" class="toc-h2 toc-link" data-title="Get company information">Get company information</a>
                   </li>
                   <li>
                     <a href="#get-otp-code" class="toc-h2 toc-link" data-title="Get OTP code">Get OTP code</a>
@@ -724,7 +724,7 @@
 <aside class="notice">
 Make sure to replace {{ACCESS_TOKEN}} with your API key
 </aside>
-<h1 id='public'>Public</h1><h2 id='get-user-information'>Get user information</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+<h1 id='public'>Public</h1><h2 id='get-company-information'>Get company information</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
   <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/users/info'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
   -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
@@ -769,9 +769,9 @@ Make sure to replace {{ACCESS_TOKEN}} with your API key
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all user information.</p>
+<p>This endpoint retrieves company information.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/user/info</code></p>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/users/info</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
