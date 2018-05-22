@@ -1,593 +1,658 @@
-<h1 id='sender'>Sender</h1><h2 id='get-sender-information'>Get sender information</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/info'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+<h1 id="Yojee-APIs-[Sender]-Info">[Sender] Info</h1>
+<h2 id='apiweb-v3-sender-infocontroller-me'>ApiWeb.V3.Sender.InfoController.me</h2>
+<p><a id="opIdApiWeb.V3.Sender.InfoController.me"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"vehicle_types"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Car"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"sender_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organisation"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+65 3138 9076"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yojee"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yojee@yojee.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"billing_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"144 Robinson Road, Singapore"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all sender information.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/info <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
 <p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/info</code></p>
-<h3 id='headers'>Headers</h3>
+
+<p><em>Get sender infomation</em></p>
+
+<h3 id="apiweb.v3.sender.infocontroller.me-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h2 id='create-order-request'>Create order request</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/orders'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'vehicle_type_id: {{vehicle_type_id}}'</span> <span class="se">\</span>
-  -d <span class="s1">'sender_id: {{sender_id}}'</span> <span class="se">\</span>
-  -d <span class="s1">'price_currency: {{price_currency}}'</span> <span class="se">\</span>
-  -d <span class="s1">'price_amount: {{price_amount}}'</span> <span class="se">\</span>
-  -d <span class="s1">'placed_by_user_profile_id: {{placed_by_user_profile_id}}'</span> <span class="se">\</span>
-  -d <span class="s1">'jobs: {{jobs}}'</span> <span class="se">\</span>
-  -d <span class="s1">'items: {{items}}'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O-ABCDEFGHIJKL"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD 10"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"placed_by_user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{NUMBER}}"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01T00:00:00.000000"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint creates an order.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/orders</code></p>
-<h3 id='headers-2'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h3 id='body'>Body</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
+<th>Parameter</th>
+<th>In</th>
 <th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>vehicle_type_id</td>
-<td>{{vehicle_type_id}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>sender_id</td>
-<td>{{sender_id}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>price_currency</td>
-<td>{{price_currency}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>price_amount</td>
-<td>{{price_amount}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>placed_by_user_profile_id</td>
-<td>{{placed_by_user_profile_id}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>jobs</td>
-<td>{{jobs}}</td>
-<td>Array</td>
-</tr>
-<tr>
-<td>items</td>
-<td>{{items}}</td>
-<td>Array</td>
-</tr>
-</tbody></table>
-<h2 id='get-order-detail'>Get order detail</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.00000000"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"placed_by_user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O-ABCDEFGHIJKL"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01T00:00:00.000000Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_customer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"display_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD 1"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific order.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}</code></p>
-<h3 id='headers-3'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h3 id='parameters'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>number</td>
-<td>Order number</td>
-</tr>
-</tbody></table>
-<h2 id='get-all-ongoing-orders-of-a-sender'>Get all ongoing orders of a sender</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.00000000"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"placed_by_user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O-ABCDEFGHIJKL"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01T00:00:00.000000Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_customer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"display_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD 1"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all ongoing orders of a sender.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing</code></p>
-<h3 id='headers-4'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
 <td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
 </tr>
 <tr>
 <td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
 </tr>
 </tbody></table>
-<h3 id='parameters-2'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Default Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>page</td>
-<td>Page number</td>
-<td>1</td>
-</tr>
-<tr>
-<td>page_size</td>
-<td>Page size</td>
-<td>10</td>
-</tr>
-</tbody></table>
-<h2 id='get-all-completed-orders-of-a-sender'>Get all completed orders of a sender</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/orders/completed'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+
+<h1 id="Yojee-APIs-[Sender]-Order">[Sender] Order</h1>
+<h2 id='apiweb-v3-sender-ordercontroller-cancel'>ApiWeb.V3.Sender.OrderController.cancel</h2>
+<p><a id="opIdApiWeb.V3.Sender.OrderController.cancel"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.00000000"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"placed_by_user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O-ABCDEFGHIJKL"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01T00:00:00.000000Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_customer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"display_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD 1"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all completed orders of a sender.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed</code></p>
-<h3 id='headers-5'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h3 id='parameters-3'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Default Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>page</td>
-<td>Page number</td>
-<td>1</td>
-</tr>
-<tr>
-<td>page_size</td>
-<td>Page size</td>
-<td>10</td>
-</tr>
-</tbody></table>
-<h2 id='create-payment-request'>Create payment request</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/payments'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'payment_method: {{payment_method}}'</span> <span class="se">\</span>
-  -d <span class="s1">'sender_id: {{sender_id}}'</span> <span class="se">\</span>
-  -d <span class="s1">'price_currency: {{price_currency}}'</span> <span class="se">\</span>
-  -d <span class="s1">'price_amount: {{price_amount}}'</span> <span class="se">\</span>
-  -d <span class="s1">'placed_by_user_profile_id: {{placed_by_user_profile_id}}'</span> <span class="se">\</span>
-  -d <span class="s1">'jobs: {{jobs}}'</span> <span class="se">\</span>
-  -d <span class="s1">'items: {{items}}'</span>
+<pre class="highlight shell tab-shell"><code>
+curl -X PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/cancel <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.00000000"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"placed_by_user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O-ABCDEFGHIJKL"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01T00:00:00.000000Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"external_customer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"display_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD 1"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint creates payment request of an order.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/payments</code></p>
-<h3 id='headers-6'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h3 id='parameters-4'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>number</td>
-<td>Order number</td>
-</tr>
-</tbody></table>
-<h3 id='body-2'>Body</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>payment_method</td>
-<td>{{payment_method}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>order_id</td>
-<td>{{order_id}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>description</td>
-<td>{{description}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>{{currency}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>credit_card</td>
-<td>{{year}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td></td>
-<td>{{number}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{name}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{month}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td></td>
-<td>{{cvc}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>{{amount}}</td>
-<td>Number</td>
-</tr>
-</tbody></table>
-<h2 id='cancel-an-order'>Cancel an order</h2><pre class="highlight shell tab-shell"><code>curl -X PUT <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/cancel'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Order cancelled."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint cancels an order.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/cancel</code></p>
-<h3 id='headers-7'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h3 id='parameters-5'>Parameters</h3>
+
+<p><em>Cancel an order</em></p>
+
+<h3 id="apiweb.v3.sender.ordercontroller.cancel-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
+</tr>
+<tr>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+<tr>
 <td>number</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
 <td>Order number</td>
 </tr>
 </tbody></table>
-<h2 id='batch-upload-multiple-orders'>Batch upload multiple orders</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/batches'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -F <span class="s1">'file: {{file}}'</span> <span class="se">\</span>
-  -d <span class="s1">'uploader_id: {{uploader_id}}'</span> <span class="se">\</span>
-  -d <span class="s1">'company_id: {{company_id}}'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"batch id"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint uploads a csv file with multiple orders.</p>
-<h3 id='http-request-8'>HTTP Request</h3>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/batches</code></p>
-<h3 id='headers-8'>Headers</h3>
+
+<h3 id="apiweb.v3.sender.ordercontroller.cancel-responses">Responses</h3>
+
 <table><thead>
 <tr>
-<th>Key</th>
-<th>Value</th>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
-</tr>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>OK</td>
+<td>None</td>
 </tr>
 </tbody></table>
-<h3 id='parameters-6'>Parameters</h3>
+<h2 id='apiweb-v3-sender-ordercontroller-completed'>ApiWeb.V3.Sender.OrderController.completed</h2>
+<p><a id="opIdApiWeb.V3.Sender.OrderController.completed"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed</code></p>
+
+<p>Get all completed orders of a sender</p>
+
+<h3 id="apiweb.v3.sender.ordercontroller.completed-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>file</td>
-<td>File to be uploaded</td>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
 </tr>
 <tr>
-<td>uploader_id</td>
-<td>Uploader ID</td>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
 </tr>
 <tr>
-<td>company_id</td>
-<td>Company ID</td>
+<td>page</td>
+<td>query</td>
+<td>integer</td>
+<td>true</td>
+<td>Page number</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>query</td>
+<td>integer</td>
+<td>true</td>
+<td>Page size</td>
 </tr>
 </tbody></table>
-<h2 id='check-batch-status'>Check batch status</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status'</span> <span class="se">\</span>
-  -H <span class="s1">'ACCESS_TOKEN: {{ACCESS_TOKEN}}'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'batch_id: {{batch_id}}'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"status"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint checks batch status.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status</code></p>
-<h3 id='headers-9'>Headers</h3>
+
+<h3 id="apiweb.v3.sender.ordercontroller.completed-responses">Responses</h3>
+
 <table><thead>
 <tr>
-<th>Key</th>
-<th>Value</th>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>OK</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-sender-paymentscontroller-create'>ApiWeb.V3.Sender.PaymentsController.create</h2>
+<p><a id="opIdApiWeb.V3.Sender.PaymentsController.create"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/payments <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/payments</code></p>
+
+<p><em>Create payment request</em></p>
+
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stripe"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a test description"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"credit_card"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242424242424242</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cvc"</span><span class="p">:</span><span class="w"> </span><span class="mi">111</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="apiweb.v3.sender.paymentscontroller.create-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>ACCESS_TOKEN</td>
-<td>{{ACCESS_TOKEN}}</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
 </tr>
 <tr>
 <td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+<tr>
+<td>number</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>Order Number</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemacreatepaymentrequest">CreatePaymentRequest</a></td>
+<td>false</td>
+<td>Payment information</td>
 </tr>
 </tbody></table>
-<h3 id='parameters-7'>Parameters</h3>
+
+<h3 id="apiweb.v3.sender.paymentscontroller.create-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Payment is executed</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>Payment failed!</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-sender-ordercontroller-create'>ApiWeb.V3.Sender.OrderController.create</h2>
+<p><a id="opIdApiWeb.V3.Sender.OrderController.create"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/orders</code></p>
+
+<p><em>Create order request</em></p>
+
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"vehicle_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"placed_by_user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="kc">null</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="kc">null</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="apiweb.v3.sender.ordercontroller.create-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
+</tr>
+<tr>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemacreateorderrequest">CreateOrderRequest</a></td>
+<td>false</td>
+<td>Order information</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<h3 id="apiweb.v3.sender.ordercontroller.create-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Create order response success</td>
+<td><a href="#schemacreateorderresponse">CreateOrderResponse</a></td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-sender-ordercontroller-show'>ApiWeb.V3.Sender.OrderController.show</h2>
+<p><a id="opIdApiWeb.V3.Sender.OrderController.show"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}</code></p>
+
+<p><em>Get order detail</em></p>
+
+<h3 id="apiweb.v3.sender.ordercontroller.show-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
+</tr>
+<tr>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+<tr>
+<td>number</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>Order Number</td>
+</tr>
+</tbody></table>
+
+<h3 id="apiweb.v3.sender.ordercontroller.show-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-sender-ordercontroller-ongoing'>ApiWeb.V3.Sender.OrderController.ongoing</h2>
+<p><a id="opIdApiWeb.V3.Sender.OrderController.ongoing"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing</code></p>
+
+<p>Get all onging orders of a sender</p>
+
+<h3 id="apiweb.v3.sender.ordercontroller.ongoing-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
+</tr>
+<tr>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>integer</td>
+<td>true</td>
+<td>Page number</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>query</td>
+<td>integer</td>
+<td>true</td>
+<td>Page size</td>
+</tr>
+</tbody></table>
+
+<h3 id="apiweb.v3.sender.ordercontroller.ongoing-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>OK</td>
+<td>None</td>
+</tr>
+</tbody></table>
+
+<h1 id="Yojee-APIs-[Sender]-Batch">[Sender] Batch</h1>
+<h2 id='apiweb-v3-sender-batchcontroller-check_status'>ApiWeb.V3.Sender.BatchController.check_status</h2>
+<p><a id="opIdApiWeb.V3.Sender.BatchController.check_status"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status</code></p>
+
+<p><em>Check batch status</em></p>
+
+<h3 id="apiweb.v3.sender.batchcontroller.check_status-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>batch_id</td>
-<td>Batch ID</td>
+<td>query</td>
+<td>integer</td>
+<td>false</td>
+<td>Batch Id</td>
+</tr>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
+</tr>
+<tr>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-sender-batchcontroller-create'>ApiWeb.V3.Sender.BatchController.create</h2>
+<p><a id="opIdApiWeb.V3.Sender.BatchController.create"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/batches <span class="se">\</span>
+  -H <span class="s1">'Content-Type: multipart/form-data'</span> <span class="se">\</span>
+  -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
+  -H <span class="s1">'COMPANY_SLUG: string'</span>
+
+</code></pre>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/batches</code></p>
+
+<p><em>Uploads a file</em></p>
+
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">file</span><span class="pi">:</span> <span class="s">string</span>
+
+</code></pre>
+<h3 id="apiweb.v3.sender.batchcontroller.create-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>access token</td>
+</tr>
+<tr>
+<td>COMPANY_SLUG</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>company slug</td>
+</tr>
+<tr>
+<td>uploader_id</td>
+<td>query</td>
+<td>integer</td>
+<td>false</td>
+<td>Uploader Id</td>
+</tr>
+<tr>
+<td>company_id</td>
+<td>query</td>
+<td>integer</td>
+<td>false</td>
+<td>Company Id</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemaapiweb.v3.dispatcher.batchcontroller.create">ApiWeb.V3.Dispatcher.BatchController.create</a></td>
+<td>false</td>
+<td>none</td>
+</tr>
+<tr>
+<td>» file</td>
+<td>body</td>
+<td>string(binary)</td>
+<td>false</td>
+<td>The file to upload</td>
 </tr>
 </tbody></table>

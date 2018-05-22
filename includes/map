@@ -1,130 +1,204 @@
-<h1 id='map'>Map</h1><h2 id='get-geocode-of-an-address'>Get geocode of an address</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/maps/geocode'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'query: {{query}}'</span> <span class="se">\</span>
-  -d <span class="s1">'country_code: {{country_code}}'</span>
-</code></pre>
+<h1 id="Yojee-APIs-[Map]">[Map]</h1>
+<h2 id='apiweb-v3-mapscontroller-geocode'>ApiWeb.V3.MapsController.geocode</h2>
+<p><a id="opIdApiWeb.V3.MapsController.geocode"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/geocode <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/geocode</code></p>
+
+<p><em>Get geocode of an address</em></p>
+
+<blockquote>
+<p>Body parameter</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">103.8462451</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2754876</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Singapore"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd, Singapore"</span><span class="w">
+  </span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SG"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint gets geocode of an address.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/geocode</code></p>
-<h3 id='body'>Body</h3>
+<h3 id="apiweb.v3.mapscontroller.geocode-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
-<th>Key</th>
-<th>Value</th>
+<th>Parameter</th>
+<th>In</th>
 <th>Type</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>query</td>
-<td>{{query}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>country_code</td>
-<td>{{country_code}}</td>
-<td>String</td>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemamapsgeocoderequest">MapsGeoCodeRequest</a></td>
+<td>false</td>
+<td>Address information</td>
 </tr>
 </tbody></table>
-<h2 id='get-direction-information'>Get direction information</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/maps/geocode'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'origin: {{origin}}'</span> <span class="se">\</span>
-  -d <span class="s1">'mode: {{mode}}'</span> <span class="se">\</span>
-  -d <span class="s1">'destination: {{destination}}'</span> <span class="se">\</span>
-  -d <span class="s1">'country_iso: {{country_iso}}'</span>
-</code></pre>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example responses</p>
+
+<p>200 Response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"overview_polyline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{OVERVIEW_POLYLINE}}"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">222</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">968</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{DATA}}"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint gets direction information.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/geocode</code></p>
-<h3 id='body-2'>Body</h3>
+
+<h3 id="apiweb.v3.mapscontroller.geocode-responses">Responses</h3>
+
 <table><thead>
 <tr>
-<th>Key</th>
-<th>Value</th>
-<th>Type</th>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>origin</td>
-<td>{{origin}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>mode</td>
-<td>{{mode}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>destination</td>
-<td>{{destination}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>country_iso</td>
-<td>{{country_iso}}</td>
-<td>String</td>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Got geocode</td>
+<td><a href="#schemamapsgeocoderesponse">MapsGeoCodeResponse</a></td>
 </tr>
 </tbody></table>
-<h2 id='get-complete-suggestions-of-an-address'>Get complete suggestions of an address</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/maps/autocomplete'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'query: {{query}}'</span> <span class="se">\</span>
-  -d <span class="s1">'country_iso: {{country_iso}}'</span>
-</code></pre>
+<h2 id='apiweb-v3-mapscontroller-direction'>ApiWeb.V3.MapsController.direction</h2>
+<p><a id="opIdApiWeb.V3.MapsController.direction"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/direction <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/direction</code></p>
+
+<p><em>Get direction information</em></p>
+
+<blockquote>
+<p>Body parameter</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="mf">103.8462451</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2754876</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd, Singapore"</span><span class="w">
+  </span><span class="s2">"origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd, Singapore"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"driving"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10 Anson Rd, Singapore"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country_iso"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sg"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint gets complete suggestions of an address.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h3 id="apiweb.v3.mapscontroller.direction-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemamapsdirectionrequest">MapsDirectionRequest</a></td>
+<td>false</td>
+<td>Address information</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<h3 id="apiweb.v3.mapscontroller.direction-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Got directions information</td>
+<td><a href="#schemamapsdirectionresponse">MapsDirectionResponse</a></td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-mapscontroller-autocomplete'>ApiWeb.V3.MapsController.autocomplete</h2>
+<p><a id="opIdApiWeb.V3.MapsController.autocomplete"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/autocomplete <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
 <p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/autocomplete</code></p>
-<h3 id='body-3'>Body</h3>
+
+<p><em>Get complete suggestions of an address</em></p>
+
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Anson Rd, Singapore"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country_iso"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sg"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="apiweb.v3.mapscontroller.autocomplete-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
-<th>Key</th>
-<th>Value</th>
+<th>Parameter</th>
+<th>In</th>
 <th>Type</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>query</td>
-<td>{{query}}</td>
-<td>String</td>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemamapsautocompleterequest">MapsAutoCompleteRequest</a></td>
+<td>false</td>
+<td>Address information</td>
 </tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<h3 id="apiweb.v3.mapscontroller.autocomplete-responses">Responses</h3>
+
+<table><thead>
 <tr>
-<td>country_iso</td>
-<td>{{country_iso}}</td>
-<td>String</td>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Got geocode</td>
+<td><a href="#schemamapsautocompleteresponse">MapsAutoCompleteResponse</a></td>
 </tr>
 </tbody></table>

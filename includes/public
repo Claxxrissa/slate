@@ -1,507 +1,748 @@
-<h1 id='public'>Public</h1><h2 id='get-company-information'>Get company information</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/users/info'</span> <span class="se">\</span>
-  -H <span class="s1">'COMPANY_SLUG: {{COMPANY_SLUG}}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+<h1 id="Yojee-APIs-[Public]-Info">[Public] Info</h1>
+<h2 id='apiweb-v3-usercontroller-info'>ApiWeb.V3.UserController.info</h2>
+<p><a id="opIdApiWeb.V3.UserController.info"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"order_schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"size_weight"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"package"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"size"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"weight"</span><span class="w">
-          </span><span class="p">],</span><span class="w">
-          </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"properties"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"job_details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"job_details"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"delivery_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivery_type"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="s2">"addresses"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"customer_language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cs_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6531591335"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"branding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"text_color_highlighted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#8ecb1b"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"text_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#2c3e50"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pricing_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yojee.com/prices/"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"logo.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"generated_favicon"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="s2">"favicon"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"original"</span><span class="p">:</span><span class="w"> </span><span class="s2">"favicon.jpg"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"96x96"</span><span class="p">:</span><span class="w"> </span><span class="p">,</span><span class="w">
-      </span><span class="s2">"banner_text_line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MON TO SAT 10AM-10PM. BOOKINGS AFTER 4PM WILL BE PROCESSED THE FOLLOWING DAY."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"banner_text_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ffffff"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"banner_header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAME DAY, NEXT DAY, EXPRESS DELIVERY"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"banner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"banner.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ffffff"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"admin_primary_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#80c939"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-     </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves company information.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/users/info?company_slug<span class="o">=</span>string
+
+</code></pre>
 <p><code>GET https://umbrella-demo.yojee.com/api/v3/public/users/info</code></p>
-<h3 id='headers'>Headers</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>COMPANY_SLUG</td>
-<td>{{COMPANY_SLUG}}</td>
-</tr>
-</tbody></table>
-<h2 id='get-otp-code'>Get OTP code</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/otp/'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"otp_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint gets OTP code.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/otp/</code></p>
-<h3 id='parameters'>Parameters</h3>
+
+<p><em>Get user infomation</em></p>
+
+<h3 id="apiweb.v3.usercontroller.info-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>phone</td>
-<td>Phone number</td>
-</tr>
-</tbody></table>
-<h2 id='verify-otp-code'>Verify OTP code</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/verify_otp/'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"user_profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+99999999999"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@yojee.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T5P2rQrC6KbkPnLE9ebyjskMUTju3vKFBzlAr+bCUpc="</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint verifies OTP code.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/verify_otp/</code></p>
-<h3 id='parameters-2'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>phone</td>
-<td>Phone number</td>
-</tr>
-<tr>
-<td>otp</td>
-<td>OTP</td>
-</tr>
-</tbody></table>
-<h2 id='get-price-estimate'>Get price estimate</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/orders/price'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'slug: {{slug}}'</span> <span class="se">\</span>
-  -d <span class="s1">'item: {{item}}'</span> <span class="se">\</span>
-  -d <span class="s1">'to_address: {{to_address}}'</span> <span class="se">\</span>
-  -d <span class="s1">'from_address: {{from_address}}'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"express"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"surcharges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"CBD"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"pickup_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"068896"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"dropoff_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"189703"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint gets a price estimate of a delivery request.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/public/orders/price</code></p>
-<h3 id='body'>Body</h3>
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
+<th>In</th>
 <th>Type</th>
+<th>Required</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>slug</td>
-<td>{{slug}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>item</td>
-<td>{{weight}}</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>to_address</td>
-<td>{{zipcode}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{location}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{lng}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{lat}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{country}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td>from_address</td>
-<td>{{zipcode}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{location}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{lng}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{lat}}</td>
-<td>String</td>
-</tr>
-<tr>
-<td></td>
-<td>{{country}}</td>
-<td>String</td>
+<td>company_slug</td>
+<td>query</td>
+<td>string</td>
+<td>true</td>
+<td>Company slug</td>
 </tr>
 </tbody></table>
-<h2 id='get-tracking-data-of-an-order'>Get tracking data of an order</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/track/{number}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+<h2 id='apiweb-v3-apicontroller-verify_otp'>ApiWeb.V3.ApiController.verify_otp</h2>
+<p><a id="opIdApiWeb.V3.ApiController.verify_otp"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O-SK1LAUPOQXJF"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"created"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"price_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"order_items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scheduled_for_fulfilment"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"service_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sameday"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"order_item_logs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-20T15:18:38.770110"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(pickup) Accepted by Miss Joanie Ullrich II ((528) 226-4679)"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-20T15:18:38.772850"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(dropoff) Accepted by Miss Joanie Ullrich II ((528) 226-4679)"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2673</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bmFvQTA1c3dybS9sNWdnOUVSdEZlZz09"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"inserted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-20T15:18:38.613719"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gift"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGD"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint gets tracking data of an order.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/track/{number}</code></p>
-<h3 id='parameters-3'>Parameters</h3>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/verify_otp/ <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/verify_otp/</code></p>
+
+<p><em>Verify OTP code</em></p>
+
+<h3 id="apiweb.v3.apicontroller.verify_otp-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phone</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Phone number</td>
+</tr>
+<tr>
+<td>otp_code</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>OTP code</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<h3 id="apiweb.v3.apicontroller.verify_otp-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>OTP Verified</td>
+<td><a href="#schemaverifyotpresponse">VerifyOtpResponse</a></td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-public-orderscontroller-get_prices'>ApiWeb.V3.Public.OrdersController.get_prices</h2>
+<p><a id="opIdApiWeb.V3.Public.OrdersController.get_prices"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/public/orders/price <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: application/json'</span>
+
+</code></pre>
+<p><code>POST https://umbrella-demo.yojee.com/api/v3/public/orders/price</code></p>
+
+<p><em>Get price estimate</em></p>
+
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"to_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"189703"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2976764,103.85701760000006"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"103.85701760000006"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2976764"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Singpore"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yojee"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"from_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"068896"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2777689,103.84839149999993"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"103.84839149999993"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2777689"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Singpore"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="apiweb.v3.public.orderscontroller.get_prices-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemagetpricesrequest">GetPricesRequest</a></td>
+<td>false</td>
+<td>Get Prices information</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"express"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"surcharges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"CBD"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickup_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"068896"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dropoff_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"189703"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"same_day"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"surcharges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"CBD"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickup_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"068896"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dropoff_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"189703"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next_day"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"surcharges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"CBD"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickup_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"068896"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dropoff_zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"189703"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="apiweb.v3.public.orderscontroller.get_prices-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Get Prices Response</td>
+<td><a href="#schemagetpricesresponse">GetPricesResponse</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-apicontroller-track_order'>ApiWeb.V3.ApiController.track_order</h2>
+<p><a id="opIdApiWeb.V3.ApiController.track_order"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/track/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/track/{number}</code></p>
+
+<p><em>Get tracking data of an order</em></p>
+
+<h3 id="apiweb.v3.apicontroller.track_order-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>number</td>
-<td>Order number</td>
+<td>path</td>
+<td>string</td>
+<td>true</td>
+<td>Tracking number</td>
 </tr>
 </tbody></table>
-<h2 id='validate-if-reset-password-token-is-still-valid'>Validate if reset password token is still valid</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/password/edit'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example responses</p>
+
+<p>200 Response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint validates if reset password token is still valid.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/password/edit</code></p>
-<h3 id='parameters-4'>Parameters</h3>
+
+<h3 id="apiweb.v3.apicontroller.track_order-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Got tracking data</td>
+<td><a href="#schematrackorderresponse">TrackOrderResponse</a></td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-apicontroller-get_otp'>ApiWeb.V3.ApiController.get_otp</h2>
+<p><a id="opIdApiWeb.V3.ApiController.get_otp"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/otp/ <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/otp/</code></p>
+
+<p><em>Get OTP code</em></p>
+
+<h3 id="apiweb.v3.apicontroller.get_otp-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phone</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Phone number</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<h3 id="apiweb.v3.apicontroller.get_otp-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Got OTP</td>
+<td><a href="#schemagetotpresponse">GetOtpResponse</a></td>
+</tr>
+</tbody></table>
+
+<h1 id="Yojee-APIs-[Public]-Invoice">[Public] Invoice</h1>
+<h2 id='apiweb-v3-public-invoicecontroller-generate'>ApiWeb.V3.Public.InvoiceController.generate</h2>
+<p><a id="opIdApiWeb.V3.Public.InvoiceController.generate"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/invoices/<span class="o">{</span>order_number<span class="o">}</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/invoices/{order_number}</code></p>
+
+<p><em>Generate an invoice on the fly</em></p>
+
+<h3 id="apiweb.v3.public.invoicecontroller.generate-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_number</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Order Number</td>
+</tr>
+</tbody></table>
+
+<h3 id="apiweb.v3.public.invoicecontroller.generate-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Create label binary fow download</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+
+<h1 id="Yojee-APIs-[Public]-Label">[Public] Label</h1>
+<h2 id='apiweb-v3-public-labelcontroller-generate_from_tracking_number'>ApiWeb.V3.Public.LabelController.generate_from_tracking_number</h2>
+<p><a id="opIdApiWeb.V3.Public.LabelController.generate_from_tracking_number"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/labels/<span class="o">{</span>tracking_number<span class="o">}</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/labels/{tracking_number}</code></p>
+
+<p><em>Generate a label on the fly</em></p>
+
+<h3 id="apiweb.v3.public.labelcontroller.generate_from_tracking_number-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tracking_number</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Tracking number</td>
+</tr>
+<tr>
+<td>format</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Output format</td>
+</tr>
+</tbody></table>
+<h3 id='enumerated-values'>Enumerated Values</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>format</td>
+<td>html</td>
+</tr>
+<tr>
+<td>format</td>
+<td>pdf</td>
+</tr>
+</tbody></table>
+
+<h3 id="apiweb.v3.public.labelcontroller.generate_from_tracking_number-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Label to be downloaded.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-public-labelcontroller-generate_from_order_number'>ApiWeb.V3.Public.LabelController.generate_from_order_number</h2>
+<p><a id="opIdApiWeb.V3.Public.LabelController.generate_from_order_number"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/labels/order/<span class="o">{</span>order_number<span class="o">}</span>
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/labels/order/{order_number}</code></p>
+
+<p><em>Generate a label on the fly from order number</em></p>
+
+<h3 id="apiweb.v3.public.labelcontroller.generate_from_order_number-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_number</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Order number</td>
+</tr>
+<tr>
+<td>format</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Output format</td>
+</tr>
+</tbody></table>
+<h3 id='enumerated-values-2'>Enumerated Values</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>format</td>
+<td>html</td>
+</tr>
+<tr>
+<td>format</td>
+<td>pdf</td>
+</tr>
+</tbody></table>
+
+<h3 id="apiweb.v3.public.labelcontroller.generate_from_order_number-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Label to be downloaded.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+
+<h1 id="Yojee-APIs-[Public]-Password">[Public] Password</h1>
+<h2 id='apiweb-v3-public-passwordcontroller-edit'>ApiWeb.V3.Public.PasswordController.edit</h2>
+<p><a id="opIdApiWeb.V3.Public.PasswordController.edit"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET https://umbrella-demo.yojee.com/api/v3/public/password/edit
+
+</code></pre>
+<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/password/edit</code></p>
+
+<p><em>Validate if reset password token is still valid</em></p>
+
+<h3 id="apiweb.v3.public.passwordcontroller.edit-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>reset_password_token</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
 <td>Reset password token</td>
 </tr>
 </tbody></table>
-<h2 id='validate-if-reset-password-token-is-still-valid-to-update-password'>Validate if reset password token is still valid to update password</h2><pre class="highlight shell tab-shell"><code>curl -X PUT <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/password'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+
+<h3 id="apiweb.v3.public.passwordcontroller.edit-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-public-passwordcontroller-update'>ApiWeb.V3.Public.PasswordController.update</h2>
+<p><a id="opIdApiWeb.V3.Public.PasswordController.update"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password is updated!"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint validates if reset password token is still valid to update password.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
-<p><code>PUT https://umbrella-demo.yojee.com/api/v3/public/password</code></p>
-<h3 id='parameters-5'>Parameters</h3>
+<pre class="highlight shell tab-shell"><code>
+curl -X PATCH https://umbrella-demo.yojee.com/api/v3/public/password
+
+</code></pre>
+<p><code>PATCH https://umbrella-demo.yojee.com/api/v3/public/password</code></p>
+
+<p><em>Validate if reset password token is still valid</em></p>
+
+<h3 id="apiweb.v3.public.passwordcontroller.update-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>password</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
 <td>New password</td>
 </tr>
 <tr>
 <td>reset_password_token</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
 <td>Reset password token</td>
 </tr>
 </tbody></table>
-<h2 id='create-reset-password-token-and-send-a-password-reset-email'>Create reset password token and send a password reset email</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/password'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
+
+<h3 id="apiweb.v3.public.passwordcontroller.update-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<h2 id='apiweb-v3-public-passwordcontroller-create'>ApiWeb.V3.Public.PasswordController.create</h2>
+<p><a id="opIdApiWeb.V3.Public.PasswordController.create"></a></p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Code samples</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An email has been sent to [email] with further instructions."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint creates reset password token and sends a password reset email.</p>
-<h3 id='http-request-8'>HTTP Request</h3>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST https://umbrella-demo.yojee.com/api/v3/public/password
+
+</code></pre>
 <p><code>POST https://umbrella-demo.yojee.com/api/v3/public/password</code></p>
-<h3 id='parameters-6'>Parameters</h3>
+
+<p><em>Create reset password token and send email</em></p>
+
+<h3 id="apiweb.v3.public.passwordcontroller.create-parameters">Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>email</td>
-<td>Email</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>Email of the account to reset password</td>
 </tr>
 </tbody></table>
-<h2 id='validate-if-reset-password-token-is-still-valid-2'>Validate if reset password token is still valid</h2><pre class="highlight shell tab-shell"><code>curl -X PATCH <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/password'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password is updated!"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint validates if reset password token is still valid.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
-<p><code>PATCH https://umbrella-demo.yojee.com/api/v3/public/password</code></p>
-<h3 id='parameters-7'>Parameters</h3>
+
+<h3 id="apiweb.v3.public.passwordcontroller.create-responses">Responses</h3>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Status</th>
+<th>Meaning</th>
 <th>Description</th>
+<th>Schema</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>password</td>
-<td>New password</td>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>none</td>
+<td>None</td>
 </tr>
 <tr>
-<td>reset_password_token</td>
-<td>Reset password token</td>
-</tr>
-</tbody></table>
-<h2 id='generate-an-invoice-on-the-fly'>Generate an invoice on the fly</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/invoices/{order_number}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Create label binary flow download"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint generates an invoice on the fly.</p>
-<h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/invoices/{order_number}</code></p>
-<h3 id='parameters-8'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>order_number</td>
-<td>Order number</td>
-</tr>
-</tbody></table>
-<h2 id='generate-a-label-on-the-fly'>Generate a label on the fly</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/labels/{tracking_number}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Label to be downloaded."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint generates a label on the fly.</p>
-<h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/labels/{tracking_number}</code></p>
-<h3 id='parameters-9'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>tracking_number</td>
-<td>Tracking_number</td>
-</tr>
-<tr>
-<td>format</td>
-<td>Output format</td>
-</tr>
-</tbody></table>
-<h2 id='generate-a-label-on-the-fly-under-order-item'>Generate a label on the fly under order item</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/labels/order_item/{tracking_number}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Label to be downloaded."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint generates a label on the fly under order item.</p>
-<h3 id='http-request-12'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/labels/order_item/{tracking_number}</code></p>
-<h3 id='parameters-10'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>tracking_number</td>
-<td>Tracking_number</td>
-</tr>
-<tr>
-<td>format</td>
-<td>Output format</td>
-</tr>
-</tbody></table>
-<h2 id='generate-a-label-on-the-fly-from-order-number'>Generate a label on the fly from order number</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-  <span class="s1">'https://umbrella-demo.yojee.com/api/v3/public/labels/order/{order_number}'</span> <span class="se">\</span>
-  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
-  -H <span class="s1">'content-type: application/json'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Label to be downloaded."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint generates a label on the fly from order number.</p>
-<h3 id='http-request-13'>HTTP Request</h3>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/public/labels/order/{order_number}</code></p>
-<h3 id='parameters-11'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>order_number</td>
-<td>Order_number</td>
-</tr>
-<tr>
-<td>format</td>
-<td>Output format</td>
+<td>422</td>
+<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
+<td>none</td>
+<td>None</td>
 </tr>
 </tbody></table>
