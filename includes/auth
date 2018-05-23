@@ -1,19 +1,21 @@
 <h1 id="Yojee-APIs-[Auth]">[Auth]</h1>
+
+<p>Authentication APIs</p>
 <h2 id='apiweb-v3-authcontroller-signup'>ApiWeb.V3.AuthController.signup</h2>
 <p><a id="opIdApiWeb.V3.AuthController.signup"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signup <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/auth/signup <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/signup</code></p>
+<p><code>POST /api/v3/auth/signup</code></p>
 
-<p><em>Individual Sender Sign up</em></p>
+<p><em>This endpoint registers a new user</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -44,7 +46,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signup <span class="se"
 <td>body</td>
 <td><a href="#schemasignuprequest">SignupRequest</a></td>
 <td>false</td>
-<td>Account Info</td>
+<td>Account info</td>
 </tr>
 </tbody></table>
 
@@ -71,21 +73,88 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signup <span class="se"
 <td><a href="#schemaauthresponse">AuthResponse</a></td>
 </tr>
 </tbody></table>
+<h2 id='apiweb-v3-authcontroller-signin'>ApiWeb.V3.AuthController.signin</h2>
+<p><a id="opIdApiWeb.V3.AuthController.signin"></a></p>
+
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/auth/signin <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'Accept: */*'</span>
+
+</code></pre>
+<p><code>POST /api/v3/auth/signin</code></p>
+
+<p><em>This endpoint allows a registered user to log in</em></p>
+
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123$%^"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long@yojee.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="apiweb.v3.authcontroller.signin-parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemasigninrequest">SigninRequest</a></td>
+<td>false</td>
+<td>Account info</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example responses</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<h3 id="apiweb.v3.authcontroller.signin-responses">Responses</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>OK</td>
+<td><a href="#schemaauthresponse">AuthResponse</a></td>
+</tr>
+</tbody></table>
 <h2 id='apiweb-v3-authcontroller-corporate_sender_signup'>ApiWeb.V3.AuthController.corporate_sender_signup</h2>
 <p><a id="opIdApiWeb.V3.AuthController.corporate_sender_signup"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/auth/corporate_sender/signup <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup</code></p>
+<p><code>POST /api/v3/auth/corporate_sender/signup</code></p>
 
-<p><em>Corporate Sender Sign up</em></p>
+<p><em>This endpoint registers a new Corporate Sender</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -127,7 +196,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup
 <td>body</td>
 <td><a href="#schemacorporatesendersignuprequest">CorporateSenderSignupRequest</a></td>
 <td>false</td>
-<td>Account Info</td>
+<td>Account info</td>
 </tr>
 </tbody></table>
 
@@ -138,73 +207,6 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup
 </blockquote>
 
 <h3 id="apiweb.v3.authcontroller.corporate_sender_signup-responses">Responses</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>OK</td>
-<td><a href="#schemaauthresponse">AuthResponse</a></td>
-</tr>
-</tbody></table>
-<h2 id='apiweb-v3-authcontroller-signin'>ApiWeb.V3.AuthController.signin</h2>
-<p><a id="opIdApiWeb.V3.AuthController.signin"></a></p>
-
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signin <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-  -H <span class="s1">'Accept: */*'</span>
-
-</code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/signin</code></p>
-
-<p><em>Sign in</em></p>
-
-<blockquote>
-<p>Body parameter</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123$%^"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long@yojee.com"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<h3 id="apiweb.v3.authcontroller.signin-parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>body</td>
-<td>body</td>
-<td><a href="#schemasigninrequest">SigninRequest</a></td>
-<td>false</td>
-<td>Account Info</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>Example responses</p>
-
-<p>200 Response</p>
-</blockquote>
-
-<h3 id="apiweb.v3.authcontroller.signin-responses">Responses</h3>
 
 <table><thead>
 <tr>

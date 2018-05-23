@@ -1,19 +1,21 @@
-<h1 id="Yojee-APIs-[Sender]-Info">[Sender] Info</h1>
+<h1 id="Yojee-APIs-[Sender]">[Sender]</h1>
+
+<p>Sender APIs</p>
 <h2 id='apiweb-v3-sender-infocontroller-me'>ApiWeb.V3.Sender.InfoController.me</h2>
 <p><a id="opIdApiWeb.V3.Sender.InfoController.me"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/info <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X GET ///api/v3/sender/info <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/info</code></p>
+<p><code>GET /api/v3/sender/info</code></p>
 
-<p><em>Get sender infomation</em></p>
+<p><em>This endpoint retrieves a Sender&#39;s infomation</em></p>
 
 <h3 id="apiweb.v3.sender.infocontroller.me-parameters">Parameters</h3>
 
@@ -43,21 +45,23 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/info <span class="se">
 </tbody></table>
 
 <h1 id="Yojee-APIs-[Sender]-Order">[Sender] Order</h1>
+
+<p>Sender Order APIs</p>
 <h2 id='apiweb-v3-sender-ordercontroller-cancel'>ApiWeb.V3.Sender.OrderController.cancel</h2>
 <p><a id="opIdApiWeb.V3.Sender.OrderController.cancel"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/cancel <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X PUT ///api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/cancel <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/cancel</code></p>
+<p><code>PUT /api/v3/sender/orders/{number}/cancel</code></p>
 
-<p><em>Cancel an order</em></p>
+<p><em>This endpoint cancels an Order</em></p>
 
 <h3 id="apiweb.v3.sender.ordercontroller.cancel-parameters">Parameters</h3>
 
@@ -116,15 +120,15 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o"
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X GET ///api/v3/sender/orders/completed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed</code></p>
+<p><code>GET /api/v3/sender/orders/completed</code></p>
 
-<p>Get all completed orders of a sender</p>
+<p><em>This endpoint retrieves all completed Orders of a Sender</em></p>
 
 <h3 id="apiweb.v3.sender.ordercontroller.completed-parameters">Parameters</h3>
 
@@ -190,16 +194,16 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed?page<
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/payments <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/payments <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}/payments</code></p>
+<p><code>POST /api/v3/sender/orders/{number}/payments</code></p>
 
-<p><em>Create payment request</em></p>
+<p><em>This endpoint creates a payment request</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -273,7 +277,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Payment is executed</td>
+<td>Payment successful</td>
 <td>None</td>
 </tr>
 <tr>
@@ -289,17 +293,17 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/sender/orders <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/orders</code></p>
+<p><code>POST /api/v3/sender/orders</code></p>
 
-<p><em>Create order request</em></p>
+<p><em>This endpoint creates an Order</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -387,15 +391,15 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders <span class="s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X GET ///api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/{number}</code></p>
+<p><code>GET /api/v3/sender/orders/{number}</code></p>
 
-<p><em>Get order detail</em></p>
+<p><em>This endpoint retrieves information about an Order</em></p>
 
 <h3 id="apiweb.v3.sender.ordercontroller.show-parameters">Parameters</h3>
 
@@ -460,15 +464,15 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o"
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X GET ///api/v3/sender/orders/ongoing?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing</code></p>
+<p><code>GET /api/v3/sender/orders/ongoing</code></p>
 
-<p>Get all onging orders of a sender</p>
+<p><em>This endpoint retrieves all ongoing Orders of a Sender</em></p>
 
 <h3 id="apiweb.v3.sender.ordercontroller.ongoing-parameters">Parameters</h3>
 
@@ -530,21 +534,23 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing?page<sp
 </tbody></table>
 
 <h1 id="Yojee-APIs-[Sender]-Batch">[Sender] Batch</h1>
+
+<p>Sender Batch APIs</p>
 <h2 id='apiweb-v3-sender-batchcontroller-check_status'>ApiWeb.V3.Sender.BatchController.check_status</h2>
 <p><a id="opIdApiWeb.V3.Sender.BatchController.check_status"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X GET ///api/v3/sender/batches/check_status <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status</code></p>
+<p><code>GET /api/v3/sender/batches/check_status</code></p>
 
-<p><em>Check batch status</em></p>
+<p><em>This endpoint checks the status of a Batch</em></p>
 
 <h3 id="apiweb.v3.sender.batchcontroller.check_status-parameters">Parameters</h3>
 
@@ -585,16 +591,16 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status <
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/batches <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/sender/batches <span class="se">\</span>
   -H <span class="s1">'Content-Type: multipart/form-data'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/sender/batches</code></p>
+<p><code>POST /api/v3/sender/batches</code></p>
 
-<p><em>Uploads a file</em></p>
+<p><em>This endpoint is used by a Sender to upload a batch file</em></p>
 
 <blockquote>
 <p>Body parameter</p>

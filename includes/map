@@ -1,19 +1,21 @@
 <h1 id="Yojee-APIs-[Map]">[Map]</h1>
+
+<p>Maps APIs</p>
 <h2 id='apiweb-v3-mapscontroller-geocode'>ApiWeb.V3.MapsController.geocode</h2>
 <p><a id="opIdApiWeb.V3.MapsController.geocode"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/geocode <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/maps/geocode <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/geocode</code></p>
+<p><code>POST /api/v3/maps/geocode</code></p>
 
-<p><em>Get geocode of an address</em></p>
+<p><em>This endpoint geocodes an address</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -72,15 +74,15 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/geocode <span class="se
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/direction <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/maps/direction <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/direction</code></p>
+<p><code>POST /api/v3/maps/direction</code></p>
 
-<p><em>Get direction information</em></p>
+<p><em>This endpoint obtains a route between two given addresses</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -141,15 +143,15 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/direction <span class="
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/maps/autocomplete <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/maps/autocomplete <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/maps/autocomplete</code></p>
+<p><code>POST /api/v3/maps/autocomplete</code></p>
 
-<p><em>Get complete suggestions of an address</em></p>
+<p><em>This endpoint retrieves autocomplete suggestions for an address</em></p>
 
 <blockquote>
 <p>Body parameter</p>

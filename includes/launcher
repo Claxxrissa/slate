@@ -1,19 +1,21 @@
 <h1 id="Yojee-APIs-[Launcher]">[Launcher]</h1>
+
+<p>Launcher APIs</p>
 <h2 id='apiweb-v3-launcher-dispatchercontroller-create'>ApiWeb.V3.Launcher.DispatcherController.create</h2>
 <p><a id="opIdApiWeb.V3.Launcher.DispatcherController.create"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/launcher/dispatchers <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/launcher/dispatchers <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/launcher/dispatchers</code></p>
+<p><code>POST /api/v3/launcher/dispatchers</code></p>
 
-<p><em>Create new dispatcher</em></p>
+<p><em>This endpoint creates a new Dispatcher</em></p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -75,15 +77,15 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/launcher/dispatchers <span c
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/launcher/companies <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+curl -X POST ///api/v3/launcher/companies <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
 </code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/launcher/companies</code></p>
+<p><code>POST /api/v3/launcher/companies</code></p>
 
-<p><em>Create new company</em></p>
+<p><em>This endpoint creates a new Company</em></p>
 
 <blockquote>
 <p>Body parameter</p>
