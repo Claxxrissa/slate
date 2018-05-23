@@ -364,17 +364,6 @@
               <ul class="toc-list-h2">
                           <ul class="toc-list-h3">
                               <li>
-                                <a href="#apiweb.v3.authcontroller.signup-parameters" class="toc-h3 toc-link" data-title="[Auth]">Parameters</a>
-                              </li>
-                              <li>
-                                <a href="#apiweb.v3.authcontroller.signup-responses" class="toc-h3 toc-link" data-title="[Auth]">Responses</a>
-                              </li>
-                          </ul>
-                  <li>
-                    <a href="#authcontroller-signup" class="toc-h2 toc-link" data-title="AuthController.signup">AuthController.signup</a>
-                  </li>
-                          <ul class="toc-list-h3">
-                              <li>
                                 <a href="#apiweb.v3.authcontroller.signin-parameters" class="toc-h3 toc-link" data-title="[Auth]">Parameters</a>
                               </li>
                               <li>
@@ -383,17 +372,6 @@
                           </ul>
                   <li>
                     <a href="#authcontroller-signin" class="toc-h2 toc-link" data-title="AuthController.signin">AuthController.signin</a>
-                  </li>
-                          <ul class="toc-list-h3">
-                              <li>
-                                <a href="#apiweb.v3.authcontroller.corporate_sender_signup-parameters" class="toc-h3 toc-link" data-title="[Auth]">Parameters</a>
-                              </li>
-                              <li>
-                                <a href="#apiweb.v3.authcontroller.corporate_sender_signup-responses" class="toc-h3 toc-link" data-title="[Auth]">Responses</a>
-                              </li>
-                          </ul>
-                  <li>
-                    <a href="#authcontroller-corporate_sender_signup" class="toc-h2 toc-link" data-title="AuthController.corporate_sender_signup">AuthController.corporate_sender_signup</a>
                   </li>
               </ul>
           </li>
@@ -2629,7 +2607,7 @@ Make sure to replace {{ACCESS_TOKEN}} with your API key
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/users/info?company_slug<span class="o">=</span>string
 
 </code></pre>
@@ -2662,7 +2640,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/users/info?company_slu
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/verify_otp/ <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
@@ -2727,7 +2705,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/verify_otp/ <span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/password/edit
 
 </code></pre>
@@ -2784,7 +2762,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/password/edit
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/otp/ <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
@@ -2842,7 +2820,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/otp/ <span class="se">
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/public/password?password<span class="o">=</span>string&amp;reset_password_token<span class="o">=</span>string
 
 </code></pre>
@@ -2906,7 +2884,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/public/password?password<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/public/password?email<span class="o">=</span>string
 
 </code></pre>
@@ -2967,7 +2945,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/public/password?email<span c
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/public/orders/price <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span>
@@ -3099,7 +3077,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/public/orders/price <span cl
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/track/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
 
@@ -3161,7 +3139,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/track/<span class="o">
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/invoices/<span class="o">{</span>order_number<span class="o">}</span>?order_number<span class="o">=</span>string
 
 </code></pre>
@@ -3218,7 +3196,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/invoices/<span class="
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/labels/<span class="o">{</span>tracking_number<span class="o">}</span>?tracking_number<span class="o">=</span>string
 
 </code></pre>
@@ -3298,7 +3276,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/labels/<span class="o"
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/public/labels/order/<span class="o">{</span>order_number<span class="o">}</span>?order_number<span class="o">=</span>string
 
 </code></pre>
@@ -3376,85 +3354,13 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/public/labels/order/<span cla
 <h1 id="Yojee-APIs-[Auth]">[Auth]</h1>
 
 <p>Authentication APIs</p>
-<h2 id='authcontroller-signup'>AuthController.signup</h2>
-<p><a id="opIdApiWeb.V3.AuthController.signup"></a></p>
-
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signup <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-  -H <span class="s1">'Accept: */*'</span>
-
-</code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/signup</code></p>
-
-<p><em>This endpoint registers a new user</em></p>
-
-<blockquote>
-<p>Body parameter</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"sender_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"individual"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6598765432"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123$%^"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long@yojee.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"billing_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"77 Robinson road, Singapore."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sender"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<h3 id="apiweb.v3.authcontroller.signup-parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>body</td>
-<td>body</td>
-<td><a href="#schemasignuprequest">SignupRequest</a></td>
-<td>false</td>
-<td>Account info</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>Example responses</p>
-
-<p>200 Response</p>
-</blockquote>
-
-<h3 id="apiweb.v3.authcontroller.signup-responses">Responses</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>OK</td>
-<td><a href="#schemaauthresponse">AuthResponse</a></td>
-</tr>
-</tbody></table>
 <h2 id='authcontroller-signin'>AuthController.signin</h2>
 <p><a id="opIdApiWeb.V3.AuthController.signin"></a></p>
 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signin <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span>
@@ -3515,89 +3421,6 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/signin <span class="se"
 <td><a href="#schemaauthresponse">AuthResponse</a></td>
 </tr>
 </tbody></table>
-<h2 id='authcontroller-corporate_sender_signup'>AuthController.corporate_sender_signup</h2>
-<p><a id="opIdApiWeb.V3.AuthController.corporate_sender_signup"></a></p>
-
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
-curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-  -H <span class="s1">'Accept: */*'</span>
-
-</code></pre>
-<p><code>POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup</code></p>
-
-<p><em>This endpoint registers a new Corporate Sender</em></p>
-
-<blockquote>
-<p>Body parameter</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"uen_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC1235M"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Engineer"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sender_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organisation"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6598765432"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"payment_option"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monthly_billing"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123$%^"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"organisation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"reg_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"77 Robinson road, Singapore."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321021"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6591245934"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Singapore"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Singapore"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ralston"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gst_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2AS9890"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"primary@abc.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"billing_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"77 Robinson road, Singapore."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<h3 id="apiweb.v3.authcontroller.corporate_sender_signup-parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>body</td>
-<td>body</td>
-<td><a href="#schemacorporatesendersignuprequest">CorporateSenderSignupRequest</a></td>
-<td>false</td>
-<td>Account info</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>Example responses</p>
-
-<p>200 Response</p>
-</blockquote>
-
-<h3 id="apiweb.v3.authcontroller.corporate_sender_signup-responses">Responses</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>OK</td>
-<td><a href="#schemaauthresponse">AuthResponse</a></td>
-</tr>
-</tbody></table>
 
 <h1 id="Yojee-APIs-[Sender]">[Sender]</h1>
 
@@ -3608,7 +3431,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/auth/corporate_sender/signup
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/info <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -3654,7 +3477,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/info <span class="se">
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/cancel <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -3721,7 +3544,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o"
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -3795,7 +3618,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/completed?page<
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span>/payments <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -3894,7 +3717,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -3992,7 +3815,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/orders <span class="s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -4065,7 +3888,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/<span class="o"
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -4143,7 +3966,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/orders/ongoing?page<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -4192,7 +4015,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/sender/batches/check_status <
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/batches <span class="se">\</span>
   -H <span class="s1">'Content-Type: multipart/form-data'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4266,7 +4089,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/sender/batches <span class="
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/store_device_token <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4339,7 +4162,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/store_device_token <sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/update <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -4419,7 +4242,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/update <span class="se
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/vehicles/<span class="o">{</span>id<span class="o">}</span>/select <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -4486,7 +4309,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/vehicles/<span class="
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/companies/config <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4553,7 +4376,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/companies/config <span
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/info <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4620,7 +4443,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/info <span class="se">
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/statistics <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4714,7 +4537,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/statistics <span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/location <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4794,7 +4617,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/location <span class="
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/task_groups <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -4868,7 +4691,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/task_groups <span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/task_groups/<span class="o">{</span>id<span class="o">}</span>/reject <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -4935,7 +4758,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/task_groups/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/task_groups/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5009,7 +4832,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/task_groups/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/task_groups/<span class="o">{</span>id<span class="o">}</span>/accept <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5087,7 +4910,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/task_groups/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/batches/<span class="o">{</span>id<span class="o">}</span>/status <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5161,7 +4984,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/batches/<span cl
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/worker/task/<span class="o">{</span>id<span class="o">}</span>/mark_as_failed <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5241,7 +5064,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/worker/task/<span class="o">
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/tasks/bulk_complete <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5308,7 +5131,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/tasks/bulk_complete <s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/ongoing?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -5364,7 +5187,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/ongoing?page<spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/completed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -5447,7 +5270,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/completed?page<s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/tasks/<span class="o">{</span>id<span class="o">}</span>/complete <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5509,7 +5332,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/worker/tasks/<span class="o">
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/history?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -5596,7 +5419,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/worker/tasks/history?page<spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/worker/sub_tasks <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -5691,7 +5514,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/worker/sub_tasks <span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/info <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -5762,7 +5585,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/info <span class="
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/sender?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25&amp;q<span class="o">=</span>string <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -5825,7 +5648,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/sender?page
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/worker?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25&amp;q<span class="o">=</span>string <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -5888,7 +5711,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/worker?page
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/order?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25&amp;q<span class="o">=</span>string <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -5951,7 +5774,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/order?page<
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/order_item?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25&amp;q<span class="o">=</span>string <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -6014,7 +5837,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/order_item?
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/task?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25&amp;q<span class="o">=</span>string <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -6081,7 +5904,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/search/task?page<s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/users <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -6166,7 +5989,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/users <span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/users <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6233,7 +6056,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/users <span class=
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/users/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -6328,7 +6151,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/users/<span class=
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/vehicle_types <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6395,7 +6218,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/vehicle_types <spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/company <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6462,7 +6285,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/company <span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/transportation_companies <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6529,7 +6352,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/transportation_com
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/company/assets <span class="se">\</span>
   -H <span class="s1">'Content-Type: multipart/form-data'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
@@ -6628,7 +6451,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/company/assets <s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/company/settings <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -6730,7 +6553,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/company/settings <
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/roles <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6811,7 +6634,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/roles <span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/roles <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6878,7 +6701,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/roles <span class=
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/roles/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -6964,7 +6787,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/roles/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span class="o">{</span>cip<span class="o">}</span>/reject_invite <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -7031,7 +6854,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/invites/sent?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -7112,7 +6935,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/invites/s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span class="o">{</span>cip<span class="o">}</span>/cancel_invite <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -7179,7 +7002,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partnership_info <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -7263,7 +7086,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partnership_info <
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partnership_info <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -7330,7 +7153,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partnership_info <
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span class="o">{</span>cip<span class="o">}</span>/send_invite <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -7397,7 +7220,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/invites/received?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -7478,7 +7301,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/invites/r
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span class="o">{</span>cip<span class="o">}</span>/accept_invite <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -7545,7 +7368,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span class="o">{</span>cip<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -7619,7 +7442,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners/<span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -7704,7 +7527,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/partners?page<span
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -7792,7 +7615,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes <s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -7859,7 +7682,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes <sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -7959,7 +7782,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs/<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8033,7 +7856,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs/<span
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8107,7 +7930,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs/<s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -8200,7 +8023,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs <spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8267,7 +8090,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/hubs <span
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -8393,7 +8216,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions <
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8460,7 +8283,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions <s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -8555,7 +8378,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes/<
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8629,7 +8452,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes/<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8703,7 +8526,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/network/spokes/
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -8836,7 +8659,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions/
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8910,7 +8733,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions/<s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -8988,7 +8811,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/network/regions
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/senders <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -9075,7 +8898,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/senders <span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/senders?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -9170,7 +8993,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/senders?page<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/senders/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -9262,7 +9085,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/senders/<span cl
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/senders/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -9336,7 +9159,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/senders/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/senders/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -9407,7 +9230,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/senders/<span c
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/dispatchers/senders?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -9488,7 +9311,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/dispatchers/sender
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisation_senders?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -9569,7 +9392,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisation_sende
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations/<span class="o">{</span>id<span class="o">}</span>/senders <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -9663,7 +9486,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations/<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations/<span class="o">{</span>id<span class="o">}</span>/senders?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -9751,7 +9574,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations/<spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -9849,7 +9672,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations <sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -9930,7 +9753,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations?page
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -10008,7 +9831,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/organisations/<spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span>/tasks/failed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -10071,7 +9894,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/workers <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -10167,7 +9990,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/workers <span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -10304,7 +10127,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers?page<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span>/tasks/assigned?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -10367,7 +10190,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -10469,7 +10292,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -10543,7 +10366,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -10610,7 +10433,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span c
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span>/approve <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -10684,7 +10507,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span class="o">{</span>id<span class="o">}</span>/tasks/completed?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -10749,7 +10572,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/workers/<span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/manifests/worker/<span class="o">{</span>worker_id<span class="o">}</span>
 
 </code></pre>
@@ -10810,7 +10633,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/manifests/worker/<
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/orders/<span class="o">{</span>number<span class="o">}</span>/cancel <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -10877,7 +10700,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/orders/<span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/orders/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -10968,7 +10791,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/orders/<span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/orders/<span class="o">{</span>number<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -11042,7 +10865,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/orders/<span class
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/orders <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -11140,7 +10963,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/orders <span clas
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/orders?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -11260,7 +11083,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/orders?page<span c
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -11351,7 +11174,7 @@ curl -X PATCH https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<spa
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -11432,7 +11255,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -11552,7 +11375,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items?page<s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/batches <span class="se">\</span>
   -H <span class="s1">'Content-Type: multipart/form-data'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -11622,7 +11445,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/batches <span cla
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/batches/check_status <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -11671,7 +11494,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/batches/check_stat
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/batches/get_order <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -11724,7 +11547,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/batches/get_order 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -11773,7 +11596,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/unassigned?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -11850,7 +11673,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/unassi
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/assign_multiple <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -11906,7 +11729,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/assign
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>id<span class="o">}</span>/step_items/<span class="o">{</span>step_id<span class="o">}</span>?type<span class="o">=</span>string <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -11969,7 +11792,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/assigned?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>25 <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12067,7 +11890,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/assign
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>id<span class="o">}</span>/unassign_worker <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12116,7 +11939,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>id<span class="o">}</span>/join_chat <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12165,7 +11988,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/accepted <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12214,7 +12037,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/accept
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>id<span class="o">}</span>/assign_worker <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12270,7 +12093,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/regroup <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12337,7 +12160,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/regro
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>task_group_id<span class="o">}</span>/tasks/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12393,7 +12216,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>task_group_id<span class="o">}</span>/task/<span class="o">{</span>id<span class="o">}</span>/delete_task_exception <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12467,7 +12290,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>task_group_id<span class="o">}</span>/task/<span class="o">{</span>id<span class="o">}</span>/mark_as_failed <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -12554,7 +12377,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span class="o">{</span>task_group_id<span class="o">}</span>/task/<span class="o">{</span>id<span class="o">}</span>/complete <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -12632,7 +12455,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_groups/<span
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/task_exception_reasons/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -12706,7 +12529,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/task_exception_
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_exception_reasons <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -12789,7 +12612,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/task_exception_re
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_exception_reasons <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -12860,7 +12683,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/task_exception_rea
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span class="o">{</span>order_item_id<span class="o">}</span>/sub_tasks <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -12934,7 +12757,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span class="o">{</span>order_item_id<span class="o">}</span>/sub_tasks/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -13019,7 +12842,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/order_items/<span 
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -13114,7 +12937,7 @@ curl -X PUT https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules/<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
@@ -13188,7 +13011,7 @@ curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules/<sp
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
   -H <span class="s1">'COMPANY_SLUG: string'</span>
@@ -13255,7 +13078,7 @@ curl -X DELETE https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules/
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
@@ -13343,7 +13166,7 @@ curl -X POST https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules <s
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># You can also use wget</span>
+<pre class="highlight shell tab-shell"><code>
 curl -X GET https://umbrella-demo.yojee.com/api/v3/dispatcher/sub_task_rules?page<span class="o">=</span>1&amp;page_size<span class="o">=</span>10 <span class="se">\</span>
   -H <span class="s1">'Accept: */*'</span> <span class="se">\</span>
   -H <span class="s1">'ACCESS_TOKEN: string'</span> <span class="se">\</span>
